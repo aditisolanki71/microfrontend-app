@@ -11,10 +11,18 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "cart",
+      name: "mycart",
       filename: "remoteEntry.js",
       exposes: {
-        "./CartShowIndex": "./src/index",
+        "./CartShowIndex": "./src/bootstrap",
+      },
+      // shared: ["faker"],
+      shared: {
+        "@faker-js/faker": {
+          singleton: true,
+          eager: false,
+          requiredVersion: "^8.0.0",
+        },
       },
     }),
     new HtmlWebpackPlugin({

@@ -1,14 +1,2 @@
-const { faker } = require("@faker-js/faker");
-
-// Example usage
-console.log("email product", faker.internet.email());
-console.log("fullbname product ", faker.name.fullName());
-
-let products = "";
-for (let i = 0; i < 3; i++) {
-  const name = faker.commerce.productName();
-  products += `<div>${name}</div>`;
-}
-console.log("products", products);
-console.log(products);
-document.querySelector("#dev-products").innerHTML = products;
+//load webpack async
+import("./bootstrap");

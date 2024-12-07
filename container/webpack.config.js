@@ -13,7 +13,7 @@ module.exports = {
         //products is connected with bootstrap "products"
         products: "myproducts@http://localhost:8081/remoteEntry.js",
         // cart: "cart@http://localhost:8082/remoteEntry.js",
-        cart: "cart@http://localhost:8082/remoteEntry.js",
+        cart: "mycart@http://localhost:8082/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({
