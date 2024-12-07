@@ -1,1 +1,3 @@
-console.log("hello from container app");
+import("./bootstrap").catch((err) =>
+  console.error("Error bootstrapping the app: is1", err)
+);
